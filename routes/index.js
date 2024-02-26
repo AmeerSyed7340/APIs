@@ -13,13 +13,13 @@ router.post('/', (req, res, next) => {
 });
 
 //post home page
-router.put('/', (req, res, next) => {
-  res.send('Received a PUT HTTP method')
+router.put('/users/:userID', (req, res, next) => {
+  res.send(`Received a PUT HTTP method on user/${req.params.userID}`);
 });
 
 //post home page
-router.delete('/', (req, res, next) => {
-  res.send('Received a DELETE HTTP method')
+router.delete('/users/:userID', (req, res, next) => {
+  res.send(`Received a PUT HTTP method on user/${req.params.userID}`);
 });
 
 module.exports = router;
